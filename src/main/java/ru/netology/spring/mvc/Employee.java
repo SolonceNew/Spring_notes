@@ -1,5 +1,6 @@
 package ru.netology.spring.mvc;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -95,6 +96,8 @@ public class Employee {
                 ", surname='" + surname + '\'' +
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
+                ", languages=" + Arrays.toString(languages) +
                 '}';
     }
 }
+
