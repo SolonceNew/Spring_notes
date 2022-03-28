@@ -26,6 +26,9 @@
     DE <form:checkbox path="languages" value="Deutch"/>
     FR <form:checkbox path="languages" value="Franch"/>
     <br><br>
+    Phone number <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
+    <br><br>
 
     <input type="submit" value="OK"/>
 
