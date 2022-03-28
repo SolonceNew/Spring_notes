@@ -2,6 +2,8 @@ package ru.netology.spring.mvc;
 
 
 
+import ru.netology.spring.mvc.vaidation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -22,6 +24,8 @@ public class Employee {
     private String[] languages;
     @Pattern(regexp = "\\d{3}-\\d{3}-\\d{2}", message = "Please pattern xxx-xxx-xx")
     private String phoneNumber;
+    @CheckEmail(value = "abc.com", message = "Email must ends with abc.com")
+    private String email;
 
     public Employee() {
         departments = new HashMap<>();
@@ -104,6 +108,14 @@ public class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
